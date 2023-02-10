@@ -24,7 +24,7 @@ const worker = new Worker<Payload, void>(
         console.log(`${token}: Done hanging`);
     },
     {
-        concurrency: 2,
+        concurrency: 1,
         lockRenewTime: 499,
         lockDuration: 500,
         stalledInterval: 100,
