@@ -6,7 +6,7 @@ setInterval(async () => {
     const job = await queue.getJob(jobId);
     if (job) {
         const state = await job.getState();
-        console.log(`job ${jobId} has state ${state}`);
+        console.log(`job ${jobId} exists but has state ${state}`);
     } else {
         console.log(`job ${jobId} does not exist`);
     }
